@@ -6,18 +6,16 @@ import settings
 
 urlpatterns = \
 patterns('',
-         url(r'^$', 'simmonsdash.views.home', name='home'),
-         url(r'^calendar/', 'simmonsdash.views.calendar', name='calendar'),
-         url(r'^events/', 'simmonsdash.views.events', name='events'),
-         url(r'^nextbus/', 'simmonsdash.nextbus.nextbus', name='nextbus'),
-         url(r'^weather/', 'simmonsdash.views.weather', name='weather'),
-         url(r'^news/', 'simmonsdash.views.news', name='news'),
-         url(r'^localnews/', 'simmonsdash.views.localnews', name='news'),
-         url(r'^light', 'simmonsdash.views.light', name='light'),
-         url(r'^editorial', 'simmonsdash.views.editorial', name='light'),
-         url(r'^posters/', 'simmonsdash.views.posters', name='posters'),
+         url(r'^$', 'dashboard.views.home', name='home'),
+         url(r'^calendar/', 'dashboard.views.calendar', name='calendar'),
+         url(r'^events/', 'dashboard.views.events', name='events'),
+         url(r'^nextbus/', 'dashboard.nextbus.nextbus', name='nextbus'),
+         url(r'^weather/', 'dashboard.views.weather', name='weather'),
+         url(r'^news/', 'dashboard.views.news', name='news'),
+         url(r'^localnews/', 'dashboard.views.localnews', name='news'),
+         url(r'^light', 'dashboard.views.light', name='light'),
          
-    # url(r'^simmonsdash/', include('simmonsdash.foo.urls')),
+    # url(r'^dashboard/', include('dashboard.foo.urls')),
          url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
              'document_root': settings.MEDIA_ROOT,
              }),

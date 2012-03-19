@@ -103,7 +103,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'simmonsdash.urls'
+ROOT_URLCONF = 'dashboard.urls'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_ROOT, "templates")

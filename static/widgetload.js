@@ -1,6 +1,6 @@
 function loadEvents() {
     $.ajax({
-	url: "/events",
+	url: "events",
 	success: function(events_json){
 	    $("#timestamp").html('');
 	    $("#eventtitle").html('');
@@ -14,7 +14,7 @@ function loadEvents() {
 
 function loadEvents2() {
     $.ajax({
-	url: "/events",
+	url: "events",
 	success: function(events_json){
 	    $("#eventlist").html('');
 	    for (var key in events_json) {
@@ -26,7 +26,7 @@ function loadEvents2() {
 
 function loadWeather() {
     $.ajax({
-	url: "/weather",
+	url: "weather",
 	success: function(weather_json) {
 	    for (var key in weather_json) {
 		$("#" + key).html(weather_json[key]);
@@ -80,7 +80,7 @@ function loadClock(){
 
 function loadNews() {
     $.ajax({
-	url: "/news",
+	url: "news",
 	success: function(news_json) {
 	    $("#newsticker").html('');
 	    for (var key in news_json) {
@@ -93,7 +93,7 @@ function loadNews() {
 
 function loadCalendar() {
     $.ajax({
-	url: "/calendar",
+	url: "calendar",
 	success: function(calendar_json){
 	    for (var key in calendar_json) {
 		$("#" + key).html(calendar_json[key]);
@@ -104,7 +104,7 @@ function loadCalendar() {
 
 function loadNextbus() {
     $.ajax({
-	url: "/nextbus",
+	url: "nextbus",
 	success: function(nextbus_json){
 	    $("#nextbus").html('');
 	    for (var key in nextbus_json){
